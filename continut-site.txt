@@ -1,0 +1,32 @@
+Ce conține site-ul
+
+- Site-ul are 6 pagini: Acasă, Servicii, Despre noi, Lucrări, Înainte / După și Contact
+- Totul este în română și în rusă, iar fiecare limbă are adresele ei, ca Google să le arate pe amândouă
+- Vizitatorul își alege singur modul luminos sau întunecat
+- Se vede bine pe telefon, pe tabletă și pe calculator
+- Sus, pe fiecare pagină, este meniul cu butonul „Solicită o ofertă”
+- Jos, în subsol, sunt paginile, serviciile și contactele: telefon, WhatsApp și TikTok
+- Prima pagină începe cu o imagine mare, titlul „Sablare metal cu laser” și butoanele „Solicită o ofertă” și „Vezi lucrările”
+- Urmează o scurtă prezentare a serviciului: 2 aparate laser, deplasare în toată Moldova, plată și prin transfer, obiecte metalice de tot felul
+- La „Ce putem curăța” apar pe prima pagină 3 categorii cu poze, iar un buton duce la pagina Servicii, unde este lista întreagă
+- Lista întreagă are 9 categorii: rame de autocamioane, caroserii auto, piese auto, utilaje, porți, garduri, structuri metalice, componente industriale și obiecte cu forme complicate
+- Pozele din categorii se măresc la click și se pot răsfoi
+- La comparațiile „înainte / după”, metalul apare pe aceeași poză înainte și după curățare, iar linia din mijloc se trage cu degetul
+- Toate comparațiile „înainte / după” sunt adunate și pe o pagină separată
+- „De ce să ne alegi” prezintă 5 motive
+- Videoclipurile de pe TikTok pornesc direct pe site: 4 pe prima pagină și 8 pe pagina Lucrări
+- Un buton duce la contul nostru de TikTok
+- „Cum funcționează” explică cei 4 pași, de la primul contact până la lucrare
+- Fiecare pagină se încheie cu un îndemn de a cere o ofertă
+- Pagina Servicii prezintă cele 6 servicii: îndepărtare rugină, îndepărtare vopsea, curățare oxidare, pregătirea suprafeței, curățarea pieselor auto și curățarea utilajelor
+- Pe pagina Despre noi este o scurtă prezentare a afacerii
+- Tot acolo sunt cele două aparate laser (220V și 380V), cu poze
+- Explicăm că ne deplasăm în toată Moldova
+- Plata se poate face cash sau prin transfer bancar
+- Galeria are 12 poze de lucrări, care se măresc la click
+- Pozele din galerie se pot filtra: Toate, Auto, Utilaje, Structuri metalice, Piese, Alte lucrări
+- Formularul de ofertă cere numele, telefonul, emailul, tipul lucrării, localitatea și un mesaj
+- Câmpurile se verifică singure: telefonul și emailul trebuie să fie valide, iar cele obligatorii nu pot rămâne goale
+- Când clientul trimite formularul, se deschide WhatsApp cu mesajul gata scris, iar el mai are doar de atașat pozele
+- Pentru contact rapid sunt butoane de WhatsApp, TikTok și apel telefonic la 076 764 576
+- Fiecare pagină are titlul și descrierea ei pregătite pentru Google, în ambele limbi

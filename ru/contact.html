@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Контакты | Запросить предложение на лазерную очистку</title>
+    <meta
+      name="description"
+      content="Отправьте фото и детали работы и получите предложение. Выезжаем по всей Республике Молдова."
+    />
+    <meta property="og:title" content="Контакты | Запросить предложение на лазерную очистку" />
+    <meta
+      property="og:description"
+      content="Отправьте фото и детали работы и получите предложение. Выезжаем по всей Республике Молдова."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:image" content="../assets/images/hero/hero-laser-cleaning.jpg" />
+    <link rel="canonical" href="https://DOMENIUL-TAU.md/ru/contact.html" />
+    <link rel="alternate" hreflang="ro" href="https://DOMENIUL-TAU.md/contact.html" />
+    <link rel="alternate" hreflang="ru" href="https://DOMENIUL-TAU.md/ru/contact.html" />
+    <link rel="alternate" hreflang="x-default" href="https://DOMENIUL-TAU.md/contact.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <script src="../js/theme.js"></script>
+  </head>
+  <body data-page="contact">
+    <div id="site-header"></div>
+    <main>
+      <section class="pagehead">
+        <div class="wrap">
+          <h1 data-i18n="ct_h"></h1>
+          <p class="lead" data-i18n="ct_p"></p>
+        </div>
+      </section>
+      <section class="sec" style="padding-top: 0">
+        <div class="wrap split">
+          <form id="quote" class="card pad" novalidate>
+            <h2 data-i18n="ct_f"></h2>
+            <div class="row">
+              <label>
+                <span data-i18n="fn"></span>
+                <input name="name" data-v data-req autocomplete="name" />
+                <span class="err"></span>
+              </label>
+              <label>
+                <span data-i18n="fph"></span>
+                <input name="phone" type="tel" data-v data-req autocomplete="tel" />
+                <span class="err"></span>
+              </label>
+            </div>
+            <div class="row">
+              <label>
+                <span data-i18n="fem"></span>
+                <input name="email" type="email" data-v autocomplete="email" />
+                <span class="err"></span>
+              </label>
+              <label>
+                <span data-i18n="fty"></span>
+                <select name="type" data-v data-req>
+                  <option value="" data-i18n="fsel"></option>
+                  <option data-i18n="ty_rust"></option>
+                  <option data-i18n="ty_paint"></option>
+                  <option data-i18n="ty_ox"></option>
+                  <option data-i18n="ty_prep"></option>
+                  <option data-i18n="ty_auto"></option>
+                  <option data-i18n="ty_mach"></option>
+                  <option data-i18n="ty_oth"></option>
+                </select>
+                <span class="err"></span>
+              </label>
+            </div>
+            <label>
+              <span data-i18n="floc"></span>
+              <input name="place" data-v />
+              <span class="err"></span>
+            </label>
+            <label>
+              <span data-i18n="fms"></span>
+              <textarea name="message" rows="4"></textarea>
+            </label>
+            <div class="note">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                />
+                <circle cx="12" cy="13" r="3.5" />
+              </svg>
+              <p data-i18n="fnote"></p>
+            </div>
+            <button class="btn" type="submit" data-i18n="fsend"></button>
+            <p class="status" role="status" aria-live="polite"></p>
+          </form>
+          <aside class="card pad">
+            <h3 data-i18n="ct_trav"></h3>
+            <p data-i18n="ct_pay"></p>
+            <h3 data-i18n="ct_q" style="margin-top: 24px"></h3>
+            <div class="quick">
+              <a class="btn" data-wa target="_blank" rel="noopener"><span>WhatsApp</span></a>
+              <a class="btn ghost" data-tt target="_blank" rel="noopener"><span>TikTok</span></a>
+              <a class="btn ghost" data-tel>
+                <span data-i18n="call"></span>
+                &nbsp;
+                <span></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script defer src="../js/language.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/gallery.js"></script>
+    <script defer src="../js/before-after.js"></script>
+    <script defer src="../js/contact.js"></script>
+  </body>
+</html>
