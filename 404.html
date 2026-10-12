@@ -43,9 +43,11 @@
     <script defer src="js/language.js"></script>
     <script defer src="js/main.js"></script>
     <script>
-      if (location.pathname.startsWith("/ru/")) {
+      const base = document.querySelector("base");
+      const ruRoot = base && new URL("ru/", base.href).pathname;
+      if (ruRoot && location.pathname.startsWith(ruRoot)) {
         document.documentElement.lang = "ru";
-        document.querySelector("base").href = "/ru/";
+        base.href = ruRoot;
       }
     </script>
   </body>
