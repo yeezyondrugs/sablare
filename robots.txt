@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DOMENIUL-TAU.md/sitemap.xml
+Sitemap: https://yeezyondrugs.github.io/sablare/sitemap.xml
