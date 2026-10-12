@@ -57,7 +57,8 @@ const selectAll = (selector) => document.querySelectorAll(selector);
 
 const currentPageId = document.body.dataset.page;
 const currentPage = PAGES.find((page) => page.id === currentPageId) || PAGES[0];
-const currentFile = `${currentPage.file}.html`;
+const currentFile = currentPage.file === "index" ? "" : currentPage.file;
+const pageHref = (file) => (file === "index" ? "./" : file);
 const phoneHref = `tel:${CONFIG.phone.replace(/\s/g, "")}`;
 const whatsappHref = `https://wa.me/${CONFIG.wa}`;
 
@@ -138,7 +139,7 @@ function renderCards() {
 
 function logoMarkup() {
   return `
-    <a class="logo" href="index.html" aria-label="Nume">
+    <a class="logo" href="./" aria-label="Nume">
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
         <rect x="3" y="3" width="26" height="26" rx="6"/>
         <path d="M9 23 23 9M9 15l8 8"/>
@@ -151,7 +152,7 @@ function controlsMarkup() {
   return `
     <div class="ctl">
       <div class="lang" role="group" aria-label="Language">
-        <a data-lang="ro" lang="ro" hreflang="ro" href="${ROOT}${currentFile}">RO</a>
+        <a data-lang="ro" lang="ro" hreflang="ro" href="${ROOT + currentFile || "./"}">RO</a>
         <a data-lang="ru" lang="ru" hreflang="ru" href="${ROOT}ru/${currentFile}">RU</a>
       </div>
       <button class="themebtn" data-theme-toggle aria-label="Dark / Light">
@@ -163,7 +164,7 @@ function controlsMarkup() {
 
 function navLinkMarkup(page) {
   const activeAttributes = page.id === currentPageId ? 'class="on" aria-current="page"' : "";
-  return `<a href="${page.file}.html" data-i18n="${page.label}" ${activeAttributes}></a>`;
+  return `<a href="${pageHref(page.file)}" data-i18n="${page.label}" ${activeAttributes}></a>`;
 }
 
 function renderHeader() {
@@ -176,7 +177,7 @@ function renderHeader() {
         ${logoMarkup()}
         <nav id="nav" aria-label="Main">
           ${PAGES.map(navLinkMarkup).join("")}
-          <a class="btn sm" href="contact.html" data-i18n="cta"></a>
+          <a class="btn sm" href="contact" data-i18n="cta"></a>
         </nav>
         ${controlsMarkup()}
         <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
@@ -191,11 +192,11 @@ function renderFooter() {
   if (!footer) return;
 
   const pageLinks = PAGES.map(
-    (page) => `<li><a href="${page.file}.html" data-i18n="${page.label}"></a></li>`,
+    (page) => `<li><a href="${pageHref(page.file)}" data-i18n="${page.label}"></a></li>`,
   ).join("");
 
   const serviceLinks = [1, 2, 3, 4]
-    .map((number) => `<li><a href="services.html" data-i18n="s${number}t"></a></li>`)
+    .map((number) => `<li><a href="services" data-i18n="s${number}t"></a></li>`)
     .join("");
 
   footer.innerHTML = `
@@ -432,6 +433,18 @@ function setupRevealOnScroll() {
   });
 }
 
+function setupLocalPreviewLinks() {
+  if (location.protocol !== "file:") return;
+
+  selectAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (/^([a-z]+:|#)/i.test(href)) return;
+
+    if (href.endsWith("/")) link.setAttribute("href", `${href}index.html`);
+    else if (!/\.[a-z0-9]+$/i.test(href)) link.setAttribute("href", `${href}.html`);
+  });
+}
+
 renderCards();
 renderHeader();
 renderFooter();
@@ -442,3 +455,4 @@ setupVideoLightbox();
 setupImagePlaceholders();
 setupCardLightbox();
 setupRevealOnScroll();
+setupLocalPreviewLinks();
